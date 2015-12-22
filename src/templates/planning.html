@@ -1,0 +1,177 @@
+{% include 'header_planning.html' %}
+<script src="{% static 'js/planning.js' %}">
+
+<h1>Planning</h1>
+<div class="content">
+  <div style="display:inline-block">
+  <table>
+    <tr>
+      <th class="borderLeft"></th>
+      <th>Lundi</th>
+      <th>Mardi</th>
+      <th>Mercredi</th>
+      <th>Jeudi</th>
+      <th>Vendredi</th>
+      <th class="borderRight">Samedi</th>
+    </tr>
+    <tr>
+      <td class="f"> 8h </td>
+      <td data-h="8" data-j="lundi"> </td>
+      <td data-h="8" data-j="mardi"> </td>
+      <td data-h="8" data-j="mercredi"> </td>
+      <td data-h="8" data-j="jeudi"> </td>
+      <td data-h="8" data-j="vendredi"> </td>
+      <td data-h="8" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 9h </td>
+      <td data-h="9" data-j="lundi"> </td>
+      <td data-h="9" data-j="mardi"> </td>
+      <td data-h="9" data-j="mercredi"> </td>
+      <td data-h="9" data-j="jeudi"> </td>
+      <td data-h="9" data-j="vendredi"> </td>
+      <td data-h="9" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 10h </td>
+      <td data-h="10" data-j="lundi"> </td>
+      <td data-h="10" data-j="mardi"> </td>
+      <td data-h="10" data-j="mercredi"> </td>
+      <td data-h="10" data-j="jeudi"> </td>
+      <td data-h="10" data-j="vendredi"> </td>
+      <td data-h="10" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 11h </td>
+      <td data-h="11" data-j="lundi"> </td>
+      <td data-h="11" data-j="mardi"> </td>
+      <td data-h="11" data-j="mercredi"> </td>
+      <td data-h="11" data-j="jeudi"> </td>
+      <td data-h="11" data-j="vendredi"> </td>
+      <td data-h="11" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 12h </td>
+      <td data-h="12" data-j="lundi"> </td>
+      <td data-h="12" data-j="mardi"> </td>
+      <td data-h="12" data-j="mercredi"> </td>
+      <td data-h="12" data-j="jeudi"> </td>
+      <td data-h="12" data-j="vendredi"> </td>
+      <td data-h="12" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 13h </td>
+      <td data-h="13" data-j="lundi"> </td>
+      <td data-h="13" data-j="mardi"> </td>
+      <td data-h="13" data-j="mercredi"> </td>
+      <td data-h="13" data-j="jeudi"> </td>
+      <td data-h="13" data-j="vendredi"> </td>
+      <td data-h="13" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 14h </td>
+      <td data-h="14" data-j="lundi"> </td>
+      <td data-h="14" data-j="mardi"> </td>
+      <td data-h="14" data-j="mercredi"> </td>
+      <td data-h="14" data-j="jeudi"> </td>
+      <td data-h="14" data-j="vendredi"> </td>
+      <td data-h="14" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 15h </td>
+      <td data-h="15" data-j="lundi"> </td>
+      <td data-h="15" data-j="mardi"> </td>
+      <td data-h="15" data-j="mercredi"> </td>
+      <td data-h="15" data-j="jeudi"> </td>
+      <td data-h="15" data-j="vendredi"> </td>
+      <td data-h="15" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 16h </td>
+      <td data-h="16" data-j="lundi"> </td>
+      <td data-h="16" data-j="mardi"> </td>
+      <td data-h="16" data-j="mercredi"> </td>
+      <td data-h="16" data-j="jeudi"> </td>
+      <td data-h="16" data-j="vendredi"> </td>
+      <td data-h="16" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 17h </td>
+      <td data-h="17" data-j="lundi"> </td>
+      <td data-h="17" data-j="mardi"> </td>
+      <td data-h="17" data-j="mercredi"> </td>
+      <td data-h="17" data-j="jeudi"> </td>
+      <td data-h="17" data-j="vendredi"> </td>
+      <td data-h="17" data-j="samedi"> </td>
+    </tr>
+    <tr>
+      <td class="f"> 18h </td>
+      <td data-h="18" data-j="lundi"> </td>
+      <td data-h="18" data-j="mardi"> </td>
+      <td data-h="18" data-j="mercredi"> </td>
+      <td data-h="18" data-j="jeudi"> </td>
+      <td data-h="18" data-j="vendredi"> </td>
+      <td data-h="18" data-j="samedi"> </td>
+    </tr>
+  </table>
+  <button class="spe">Ajouter une matière</button>
+  <div class="env">
+    <div class="add">
+      <h2> Ajouter une matière </h2>
+      <div class="form">
+        <div class="form-group">
+          <label for="matiere"> Matière :</label>
+          <br/>
+          <input id="matiere" type="text">
+        </div>
+        <div class="form-group">
+          <label for="matiere"> Jour :</label>
+          <br/>
+          <input id="jour" type="text">
+        </div>
+        <div class="form-group">
+          <label for="matiere"> Debut :</label>
+          <br/>
+          <input id="debut" type="number">
+        </div>
+        <div class="form-group">
+          <label for="matiere"> Duree :</label>
+          <br/>
+          <input id="duree" type="number">
+        </div>
+        <div class="form-group">
+          <label for="matiere"> Couleur :</label>
+          <br/>
+
+          <input id="color" type="color">
+        </div>
+        <div class="form-group">
+          <button>Envoyer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+
+  <div style="display:inline-block" class="leftContent">
+    <h2 style=""> Ajout de Matières </h2>
+    <label>Matière :</labe>
+      <select id="pop" style="width:100%" type="text">
+        <option value="Mathématiques">Mathématiques</option>
+        <option value="Français">Français</option>
+        <option value="Anglais">Anglais</option>
+        <option value="SIN">SIN</option>
+        <option value="ET">ET</option>
+        <option value="EE">EE</option>
+        <option value="ITEC">ITEC</option>
+        <option value="Physique">Physique</option>
+        <option value="Cinéma">Cinéma</option>
+
+      </select>
+      <label>Couleur :</labe>
+        <input style="width:102%" type="color">
+        <button class="addButton"> Ajouter </button>
+        <button class="red"> Supprimer </button>
+  </div>
+</div></script>

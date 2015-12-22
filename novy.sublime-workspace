@@ -1,0 +1,426 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"I",
+				"InscriptionForm"
+			],
+			[
+				"au",
+				"auto_now_add"
+			],
+			[
+				"Date",
+				"DateTimeField"
+			],
+			[
+				"Inscription",
+				"InscriptionAdmin"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"in",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/novy/urls.py",
+			"settings":
+			{
+				"buffer_size": 192,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/planning/views.py",
+			"settings":
+			{
+				"buffer_size": 98,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/novy/settings.py",
+			"settings":
+			{
+				"buffer_size": 2684,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/home.html",
+			"settings":
+			{
+				"buffer_size": 20,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/planning/models.py",
+			"settings":
+			{
+				"buffer_size": 636,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/planning/admin.py",
+			"settings":
+			{
+				"buffer_size": 357,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "from django import forms\n\nfrom .models import Inscription\n\nclass InscriptionForm(forms.ModelForm):\n	class Meta:\n		model = Inscription\n		fields = ['full_name', 'email'] #champs de Inscription\n	\n	def clean_email(self): #overwriting function for cleaning email data, self est l'instance du formulaire\n		email = self.cleaned_data.get('email')\n		email_base, provider = email.split(\"@\")\n		domain, extension = provider.split('.')\n		if not domain == 'novy':\n			raise forms.ValidationError(\"Vous devez appartenir au domaine novy pour vous inscrire\")\n		if not extension == \"fr\":\n			raise forms.ValidationError(\"Veuillez utiliser une adresse mail française !\")\n		return email \n\n	def clean_full_name(self): #overwriting function for cleaning email data, self est l'instance du formulaire\n		full_name = self.cleaned_data.get('full_name')\n		#verifications ? \n		return full_name",
+			"file": "src/planning/forms.py",
+			"file_size": 865,
+			"file_write_time": 130933957279451776,
+			"settings":
+			{
+				"buffer_size": 863,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Thibault/Desktop/novy/src/forms.py",
+		"/C/Users/Thibault/Desktop/novy/src/planning/templates/home.html",
+		"/C/Users/Thibault/Desktop/novy/src/manage.py",
+		"/C/xampp2/htdocs/ProjetB2_Thibault_Terence/recherche.php",
+		"/C/xampp2/htdocs/ProjetB2_Thibault_Terence/stylesheet/styles.css",
+		"/C/xampp2/htdocs/ProjetB2_Thibault_Terence/enterprise_form.php",
+		"/C/xampp2/htdocs/ProjetB2_Thibault_Terence/seek_form.php",
+		"/C/Users/Thibault/Desktop/test.html",
+		"/C/Users/Thibault/Desktop/Ingesup/DevWeb/Projet/index.html/index.html",
+		"/C/Users/Thibault/Desktop/Ingesup/HTML/exercice 4/styles/style.css",
+		"/C/Users/Thibault/Desktop/site Thibault/pages/synopsis.html",
+		"/C/Users/Thibault/Desktop/DevWeb/Projet/index.html/index.html",
+		"/C/Users/Thibault/Desktop/Thibault_Gautier_sitedejeux/pages/ryse.html",
+		"/C/wamp/www/siteV2/index/index.html",
+		"/C/Users/Thibault/Desktop/Ingesup/HTML/exercice 4/index.html/index.html",
+		"/C/Users/Thibault/Desktop/résultats_DDI.pdf",
+		"/C/Users/Thibault/Desktop/téléchargement.jpg",
+		"/C/Users/Thibault/Desktop/slide2.jpg",
+		"/C/Users/Thibault/Desktop/05714384-photo-microsoft-techdays-2013.jpg",
+		"/C/Users/Thibault/Desktop/2013-10-18.JPG",
+		"/C/Users/Thibault/Desktop/image.png",
+		"/C/Users/Thibault/Desktop/HKT.jpg",
+		"/C/Users/Thibault/Desktop/microsoft-tech-days-2013.jpg",
+		"/C/Users/Thibault/Desktop/Labo/Projet/index.html/style.css",
+		"/C/Users/Thibault/Desktop/Labo/Projet/index.html/index.html",
+		"/C/Users/Thibault/Desktop/Ingesup/HTML/exercice 3/index.html/index.html"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/novy/urls.py",
+					"settings":
+					{
+						"buffer_size": 192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								102,
+								102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/planning/views.py",
+					"settings":
+					{
+						"buffer_size": 98,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								96
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/novy/settings.py",
+					"settings":
+					{
+						"buffer_size": 2684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1078,
+								1078
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 580.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/templates/home.html",
+					"settings":
+					{
+						"buffer_size": 20,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/planning/models.py",
+					"settings":
+					{
+						"buffer_size": 636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								589,
+								589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/planning/admin.py",
+					"settings":
+					{
+						"buffer_size": 357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								223,
+								223
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/planning/forms.py",
+					"settings":
+					{
+						"buffer_size": 863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								665,
+								665
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 11.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 201.0,
+	"status_bar_visible": true
+}

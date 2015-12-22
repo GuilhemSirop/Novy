@@ -1,0 +1,13 @@
+{% include 'header_planning.html' %}
+
+<body>
+    <form method="POST" action="/display/">
+        {% csrf_token %}
+<!-- form as paragraph style -->
+        {{form_connexion_render.as_p}}
+
+    <input class ='btn btn-primary' type='submit' value = "Sign Up"/>
+
+</form>
+
+  </body>
